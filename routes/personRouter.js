@@ -9,7 +9,7 @@ router.route('/')
 
 
 router.route('/:id')
-.get(personController.getSinglePerson)
+.get(personController.getPerson)
 .patch(personController.updatePerson)
 .delete(personController.deletePerson);
 

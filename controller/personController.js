@@ -17,7 +17,7 @@ exports.createPerson = async (req,res) =>{
     };
 };
 
-exports.getSinglePerson = async(req,res) =>{
+exports.getPerson = async(req,res) =>{
     try {
         const person = await Person.findById(req.params.id);
 
