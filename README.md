@@ -80,7 +80,7 @@ Update person name by ID.
 
 
 
-## Delete User
+## Delete Person
 
 ```
 DELETE /:id
