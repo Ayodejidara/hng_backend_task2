@@ -17,25 +17,6 @@ exports.createPerson = async (req,res) =>{
     };
 };
 
-exports.getPeople = async(req,res) =>{
-    try {
-        const person = await Person.find();
-
-        res.status(200).json({
-            result: person.length,
-            status: 'success',
-            data: {
-                person
-            }
-        });
-    } catch (err) {
-        res.status(400).json({
-            status: 'fail',
-            message: err
-        });
-    };
-};
-
 exports.getSinglePerson = async(req,res) =>{
     try {
         const person = await Person.findById(req.params.id);

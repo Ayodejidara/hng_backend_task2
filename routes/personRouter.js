@@ -5,7 +5,6 @@ const router = express.Router();
 const personController = require('./../controller/personController');
 
 router.route('/')
-.get(personController.getPeople)
 .post(personController.createPerson);
 
 
