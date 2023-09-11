@@ -22,7 +22,7 @@ exports.getPerson = async(req,res) =>{
         const person = await Person.findById(req.params.id);
 
         if(!person) {
-            return res.status(400).json({
+            return res.status(404).json({
                 status: 'fail',
                 message: 'Cannot find person with that ID!'
             });
@@ -49,7 +49,7 @@ exports.updatePerson = async(req,res) =>{
         });
 
         if(!person) {
-            return res.status(400).json({
+            return res.status(404).json({
                 status: 'fail',
                 message: 'No person found with ID!'
             });
@@ -72,7 +72,7 @@ exports.deletePerson = async(req,res) =>{
     try {
         const person = await Person.findByIdAndDelete(req.params.id);
         if(!person) {
-            return res.status(400).json({
+            return res.status(404).json({
                 status: 'fail',
                 message: 'No person found with ID'
             });
