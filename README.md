@@ -95,3 +95,12 @@ Delete a person by ID.
 * `204 DELETED:` Person found and deleted.
 * `404 Not Found:` Person with the provided ID not found.
 * `400 Bad Request:` Something went wrong. Returns error message.
+
+* ## Setup and run
+To set up this project, run the following commands on your terminal
+```bash
+1. Clone the repo `git clone https://github.com/Ayodejidara/hng_backend_task2.git` 
+2. Navigate to the project directory `cd hng_backend_task2`
+3. Install necessary dependencies `npm install`
+4. To run the project `npm run start`
+
