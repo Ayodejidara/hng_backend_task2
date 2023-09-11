@@ -99,6 +99,10 @@ Delete a person by ID.
 * `404 Not Found:` Person with the provided ID not found.
 * `400 Bad Request:` Something went wrong. Returns error message.
 
+## Documentation
+
+Postman documentation link: https://documenter.getpostman.com/view/20376654/2s9YC1XaYx
+
 * ## Setup and run
 To set up this project, run the following commands on your terminal
 ```bash
