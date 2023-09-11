@@ -4,6 +4,9 @@
 <h2>Base URL</h2>
 <div>The base URL for all API endoints is: <a href= "http://localhost:3000"> http://localhost:3000/api </a> </div>
 
+## UML diagram
+![Untitled Workspace](https://github.com/Ayodejidara/hng_backend_task2/assets/82909511/dea08ee2-a80c-4c0c-b620-84b0518e7544)
+
 ## Endpoints
 
 ### Create person
