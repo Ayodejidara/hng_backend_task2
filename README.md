@@ -54,7 +54,7 @@ Retrieve person information by ID.
 ## Update Person
 
 ```  
-PATCH /:id
+PUT /:id
  ```
 
 Update person name by ID.
