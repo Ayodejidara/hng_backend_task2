@@ -10,7 +10,7 @@ router.route('/')
 
 router.route('/:id')
 .get(personController.getPerson)
-.patch(personController.updatePerson)
+.put(personController.updatePerson)
 .delete(personController.deletePerson);
 
 module.exports = router;

@@ -3,12 +3,7 @@ const Person = require('./../model/personModel');
 exports.createPerson = async (req,res) =>{
     try {
         const person = await Person.create({name: req.body.name});
-        res.status(201).json({
-            status: 'success',
-            data: {
-                person
-            }
-        });
+        res.status(201).json(person);
     } catch (err) {
         res.status(400).json({
             status: 'fail',
@@ -19,7 +14,8 @@ exports.createPerson = async (req,res) =>{
 
 exports.getPerson = async(req,res) =>{
     try {
-        const person = await Person.findById(req.params.id);
+        const personId = req.params.id;
+        const person = await Person.findById(personId);
 
         if(!person) {
             return res.status(404).json({
@@ -27,12 +23,7 @@ exports.getPerson = async(req,res) =>{
                 message: 'Cannot find person with that ID!'
             });
         };
-        res.status(200).json({
-            status: 'success',
-            data: {
-                person
-            }
-        });
+        res.status(200).json(person);
     } catch (err) {
         res.status(400).json({
             status: 'fail',
@@ -43,7 +34,8 @@ exports.getPerson = async(req,res) =>{
 
 exports.updatePerson = async(req,res) =>{
     try {
-        const person = await Person.findByIdAndUpdate(req.params.id, req.body, {
+        const personId = req.params.id;
+        const person = await Person.findByIdAndUpdate(personId, req.body, {
             new: true,
             runValidators: true
         });
@@ -54,12 +46,7 @@ exports.updatePerson = async(req,res) =>{
                 message: 'No person found with ID!'
             });
         };
-        res.status(200).json({
-            status: 'success',
-            data: {
-                person
-            }
-        })
+        res.status(200).json(person);
     } catch (err) {
         res.status(400).json({
             status: 'fail',
@@ -78,10 +65,7 @@ exports.deletePerson = async(req,res) =>{
             });
         };
  
-        res.status(204).json({
-            status: 'success',
-            data: null
-        })
+        res.status(204).json({data: null})
     } catch (err) {
         res.status(400).json({
             status: 'fail',
